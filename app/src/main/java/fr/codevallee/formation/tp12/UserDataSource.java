@@ -8,14 +8,14 @@ import android.database.sqlite.SQLiteDatabase;
  * Created by guillaumelazaro on 16/10/2017.
  */
 
-public class LibraryDataSource {
+public class UserDataSource {
 
 
-    private final LibraryDBHelper helper;
+    private final UserDBHelper helper;
     private SQLiteDatabase db;
 
-    public LibraryDataSource(Context context) {
-        helper = new LibraryDBHelper(context);
+    public UserDataSource(Context context) {
+        helper = new UserDBHelper(context);
     }
 
     public SQLiteDatabase getDB() {

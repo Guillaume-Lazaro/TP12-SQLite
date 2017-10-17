@@ -2,7 +2,6 @@ package fr.codevallee.formation.tp12;
 
 import android.content.ContentValues;
 import android.database.Cursor;
-import android.util.Log;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -13,7 +12,7 @@ import java.util.List;
 
 public class UserDAO {
 
-    private LibraryDataSource lib;
+    private UserDataSource lib;
 
     private static final String COL_ID = "id";
     private static final String COL_NOM = "nom";
@@ -22,8 +21,8 @@ public class UserDAO {
     private static final String COL_METIER = "metier";
     private static final String TABLE_NAME = "users";
 
-    public UserDAO(LibraryDataSource libraryDataSource) {
-        this.lib = libraryDataSource;
+    public UserDAO(UserDataSource userDataSource) {
+        this.lib = userDataSource;
     }
 
     public User create(User user) {

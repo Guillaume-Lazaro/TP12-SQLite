@@ -8,12 +8,12 @@ import android.database.sqlite.SQLiteOpenHelper;
  * Created by guillaumelazaro on 16/10/2017.
  */
 
-public class LibraryDBHelper extends SQLiteOpenHelper {
+public class UserDBHelper extends SQLiteOpenHelper {
 
     public static final String DB_NAME = "Users.db";
     public static final int DB_VERSION = 1;
 
-    public LibraryDBHelper(Context context) {
+    public UserDBHelper(Context context) {
         super(context, DB_NAME, null, DB_VERSION);
     }
 

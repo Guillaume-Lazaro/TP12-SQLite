@@ -3,7 +3,6 @@ package fr.codevallee.formation.tp12;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -80,17 +79,15 @@ public class ModifyUserActivity extends AppCompatActivity {
         User newUser = new User(id,nom,prenom,age,metier);
 
         //Récupération de la base de données et insertion de l'objet newUser:
-        LibraryDataSource libraryDataSource = new LibraryDataSource(this);
-        UserDAO userDAO = new UserDAO(libraryDataSource);
-
-        //userDAO.create(newUser);
+        UserDataSource userDataSource = new UserDataSource(this);
+        UserDAO userDAO = new UserDAO(userDataSource);
         userDAO.update(newUser);
     }
 
     public void supprimerUser() {
         //Récupération de la base de données et insertion de l'objet newUser:
-        LibraryDataSource libraryDataSource = new LibraryDataSource(this);
-        UserDAO userDAO = new UserDAO(libraryDataSource);
+        UserDataSource userDataSource = new UserDataSource(this);
+        UserDAO userDAO = new UserDAO(userDataSource);
 
         //userDAO.delete(userCourant);
         userDAO.delete(userCourant.getId() );

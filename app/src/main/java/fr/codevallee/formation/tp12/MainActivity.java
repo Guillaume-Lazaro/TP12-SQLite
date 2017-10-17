@@ -3,17 +3,12 @@ package fr.codevallee.formation.tp12;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
-import android.widget.SimpleAdapter;
 
 import java.util.ArrayList;
-
-import static android.R.id.list;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -25,8 +20,8 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         //Création de la base et du DAO :
-        LibraryDataSource libraryDataSource = new LibraryDataSource(this);
-        UserDAO userDAO = new UserDAO(libraryDataSource);
+        UserDataSource userDataSource = new UserDataSource(this);
+        UserDAO userDAO = new UserDAO(userDataSource);
 
         //Interface:
         listViewUsers = (ListView) findViewById(R.id.lv_users);
