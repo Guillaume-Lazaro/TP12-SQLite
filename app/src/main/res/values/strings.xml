@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">TP12</string>
+    <string name="liste_des_utilisateurs">Liste des utilisateurs</string>
+    <string name="ajouter_un_utilisateur">Ajouter un utilisateur</string>
+    <string name="modifier_un_utilisateur">Modifier un utilisateur</string>
+    <string name="nom">Nom</string>
+    <string name="prenom">Prénom</string>
+    <string name="age">Age</string>
+    <string name="metier">Métier</string>
+    <string name="ok">OK</string>
+    <string name="modifier">Modifier</string>
+    <string name="supprimer">Supprimer</string>
+</resources>
