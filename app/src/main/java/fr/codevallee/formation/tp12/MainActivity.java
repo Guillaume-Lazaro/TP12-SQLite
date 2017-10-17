@@ -42,8 +42,8 @@ public class MainActivity extends AppCompatActivity {
         for (int i=0 ; i<listUser.size() ; i++) {
             listName.add(i, listUser.get(i).getNom()+" "+listUser.get(i).getPrenom());
         }
-        //ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, listName); //Ancienne solution
 
+        //ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, listName); //Ancienne solution
         UserAdapter userAdapter = new UserAdapter(this, listUser);
         listViewUsers.setAdapter(userAdapter);
 

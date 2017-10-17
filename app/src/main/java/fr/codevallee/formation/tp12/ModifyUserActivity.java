@@ -76,21 +76,19 @@ public class ModifyUserActivity extends AppCompatActivity {
         prenom = editTextPrenom.getText().toString();
         age = Integer.valueOf(editTextAge.getText().toString());
         metier = editTextMetier.getText().toString();
-        User newUser = new User(id,nom,prenom,age,metier);
+        User updateUser = new User(id,nom,prenom,age,metier);
 
-        //Récupération de la base de données et insertion de l'objet newUser:
+        //Récupération de la base de données et mise à jour de l'objet updateUser:
         UserDataSource userDataSource = new UserDataSource(this);
         UserDAO userDAO = new UserDAO(userDataSource);
-        userDAO.update(newUser);
+        userDAO.update(updateUser);
     }
 
     public void supprimerUser() {
-        //Récupération de la base de données et insertion de l'objet newUser:
+        //Récupération de la base de données et destruction de l'objet par rapport à son id:
         UserDataSource userDataSource = new UserDataSource(this);
         UserDAO userDAO = new UserDAO(userDataSource);
-
-        //userDAO.delete(userCourant);
-        userDAO.delete(userCourant.getId() );
+        userDAO.delete(userCourant.getId());
     }
 
     public boolean champRemplis() {
